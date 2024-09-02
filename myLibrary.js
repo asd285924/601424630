@@ -7,10 +7,6 @@
         alert(message);
     }
 
-    // 将方法暴露给全局对象
-    global.myLibrary = {
-        showAlert: showAlert
-    };
     //正式服务处发放道具的方法
     async function FormalOffice() {
         if (stopExecution) return; // 检查停止标志位
@@ -158,4 +154,9 @@
         console.log('发送道具成功');
         // ------------------------------------------------------------------------------------------------------------------------------------------------
     }
+    // 将方法暴露给全局对象
+    global.myLibrary = {
+        showAlert: showAlert,
+        FormalOffice: FormalOffice
+    };
 })(window);
